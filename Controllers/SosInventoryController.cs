@@ -44,7 +44,7 @@ namespace SOSInventory.Controllers
                     .Where(a => a.ItemId == id)
                     .SumAsync(a => (int?)a.QuantityAdjusted) ?? 0;
 
-                int quantityOnHand = (totalReceived + totalAdjusted) - totalShipped;
+                int quantityOnHand = (totalReceived + totalAdjusted + totalShipped);
 
                 //Return the response
                 return Ok(new ItemQuantityResponse

@@ -57,11 +57,11 @@ static void SeedData(SosInventoryDbContext context)
         );
 
         context.Shipments.AddRange(
-        new Shipment { ShipmentRefNumber = "SH001", ItemId = item.ItemId, QuantityShipped = 10 }
+        new Shipment { ShipmentRefNumber = "SH001", ItemId = item.ItemId, QuantityShipped = -32 }
         );
 
         context.Adjustments.AddRange(
-          new Adjustment { AdjustmentReferenceNumber = "AD001", ItemId = item.ItemId, QuantityAdjusted = 2 }
+          new Adjustment { AdjustmentReferenceNumber = "AD001", ItemId = item.ItemId, QuantityAdjusted = -2 }
         );
 
         context.SaveChanges();
